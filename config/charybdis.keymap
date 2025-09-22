@@ -9,7 +9,6 @@
 #define NUMBER  1
 #define FN  2
 #define HOTKEY  3
-
 #define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29
 #define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35
 #define THUMBS 36 37 38 39 40 41
@@ -76,6 +75,11 @@
             bindings = <&tog 3>;
             key-positions = <0 5>;
         };
+
+        Grave_Tilde {
+            bindings = <&kp GRAVE>;
+            key-positions = <12 13>;
+        };
     };
 
     behaviors {
@@ -87,9 +91,11 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = < KEYS_R THUMBS >; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -98,11 +104,11 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = < KEYS_L THUMBS >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
     };
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -110,10 +116,10 @@
         default_layer {
             label = "DEFAULT";
             bindings = <
-&kp TAB          &kp Q  &kp W  &kp E     &kp R  &kp T  &kp Y      &kp U      &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp C_VOLUME_UP  &kp A  &kp S  &kp D     &kp F  &kp G  &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&kp C_VOL_DN     &kp Z  &kp X  &kp C     &kp V  &kp B  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                               &mkp MB1  &mo 2  &mo 1  &kp ENTER  &kp SPACE  &kp LSHFT
+&kp TAB          &kp Q            &kp W            &kp E         &kp R              &kp T  &kp Y      &kp U              &kp I         &kp O            &kp P                    &kp BACKSPACE
+&kp C_VOLUME_UP  &hml LEFT_ALT A  &hml LEFT_GUI S  &hml LCTRL D  &hml LEFT_SHIFT F  &kp G  &kp H      &hmr LEFT_SHIFT J  &hmr LCTRL K  &hmr LEFT_GUI L  &hmr LEFT_ALT SEMICOLON  &kp SQT
+&kp C_VOL_DN     &kp Z            &kp X            &kp C         &kp V              &kp B  &kp N      &kp M              &kp COMMA     &kp DOT          &kp FSLH                 &kp DEL
+                                                   &mkp MB1      &mo 2              &mo 1  &kp ENTER  &kp SPACE          &kp LSHFT
             >;
         };
 
@@ -122,7 +128,7 @@
             bindings = <
 &kp F1     &kp F2     &kp F3        &kp F4        &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &kp F11    &kp F12
 &none      &kp N1     &kp N2        &kp N3        &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9     &kp N0     &kp PLUS
-&kp LSHFT  &mkp MCLK  &kp C_VOL_DN  &kp C_VOL_UP  &none   &none   &none   &none   &none   &kp MINUS  &kp EQUAL  &kp NON_US_BACKSLASH
+&kp LSHFT  &mkp MCLK  &kp C_VOL_DN  &kp C_VOL_UP  &none   &none   &none   &none   &none   &kp MINUS  &kp EQUAL  &kp BACKSLASH
                                     &none         &none   &none   &trans  &none   &none
             >;
         };
