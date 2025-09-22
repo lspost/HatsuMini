@@ -80,6 +80,11 @@
             bindings = <&kp GRAVE>;
             key-positions = <12 13>;
         };
+
+        Hotkey_Toggle {
+            bindings = <&tog 2>;
+            key-positions = <34 35>;
+        };
     };
 
     behaviors {
@@ -136,10 +141,10 @@
         hotkey_layer {
             label = "HOTKEY";
             bindings = <
-&none             &none  &none     &kp UP    &none      &none  &none  &none     &kp UP    &none      &none  &none
-&kp LC(LA(LEFT))  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &kp LC(LA(RIGHT))
-&none             &none  &none     &none     &none      &none  &none  &none     &none     &none      &none  &none
-                                   &none     &none      &none  &none  &none     &none
+&none             &none  &none     &kp UP    &none      &none  &mkp LCLK  &mkp RCLK  &none     &none         &none      &none
+&kp LC(LA(LEFT))  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none      &kp LEFT   &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp LC(LA(RIGHT))
+&none             &none  &none     &none     &none      &none  &none      &none      &none     &none         &none      &none
+                                   &none     &none      &none  &none      &none      &none
             >;
         };
 
