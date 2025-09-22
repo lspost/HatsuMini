@@ -74,7 +74,6 @@
         };
     };
 
-/ {
     behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -99,7 +98,7 @@
             hold-trigger-on-release;
         };
     };
-};
+
 
     keymap {
         compatible = "zmk,keymap";
