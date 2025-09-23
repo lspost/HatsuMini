@@ -53,6 +53,6 @@
             layers = <4>;
 
             input-processors = <&zip_xy_scaler 2 1>;
-        }
+        };
     };
 };
