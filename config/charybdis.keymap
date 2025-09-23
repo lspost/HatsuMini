@@ -175,10 +175,10 @@
 
         automouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans     &trans     &trans
+&trans  &trans    &trans  &trans    &trans      &trans       &mkp LCLK  &mkp RCLK  &trans        &trans  &trans  &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET  &kp AMPS   &kp ASTERISK  &trans  &trans  &trans
+&trans  &trans    &trans  &trans    &trans      &trans       &trans     &trans     &trans        &trans  &trans  &trans
+                          &trans    &trans      &trans       &trans     &trans     &trans
             >;
         };
     };
