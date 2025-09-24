@@ -93,12 +93,12 @@
 
         MB2_Right {
             bindings = <&mkp RCLK>;
-            key-positions = <18 19>;
+            key-positions = <7 8>;
         };
 
         MB2_Left {
             bindings = <&mkp RCLK>;
-            key-positions = <16 17>;
+            key-positions = <3>;
         };
     };
 
