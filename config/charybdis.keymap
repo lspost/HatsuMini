@@ -98,7 +98,7 @@
 
         MB2_Left {
             bindings = <&mkp RCLK>;
-            key-positions = <3>;
+            key-positions = <3 4>;
         };
     };
 
