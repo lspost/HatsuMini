@@ -100,6 +100,11 @@
             bindings = <&mkp RCLK>;
             key-positions = <3 4>;
         };
+
+        Scroll {
+            bindings = <&mo 1>;
+            key-positions = <6 8>;
+        };
     };
 
     behaviors {
